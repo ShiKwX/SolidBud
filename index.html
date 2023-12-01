@@ -9,7 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/dist/img/faviconBrickwall-dark.png">
+    <link rel="icon" type="image/x-icon" href="/dist/img/faviconBrickwall-light.png">
+    <meta name="description"
+        content="Firma budowlana SolidBud - Twoi zaufani partnerzy w budowie i remontach. Oferujemy kompleksowe usługi budowlane, remontowe i wykończeniowe. Zrealizujemy Twój projekt z najwyższą jakością i terminowością. Skontaktuj się z nami już dziś!">
     <link rel="stylesheet" href="./dist/css/style.min.css">
+    <link rel="preload" href="./dist/img/heroImageSmall.webp" fetchpriority="high" as="image">
 </head>
 
 <body>
@@ -19,8 +24,7 @@
 
                 <div class="navbar__logo">
                     <a href="#">
-
-                        <img src="./dist/img/icons8-speaker-deck.svg" alt="" srcset="">
+                        <img src="./dist/img/icons8-speaker-deck.svg" alt="Logo firmy SolidBud" width="60" height="60">
                     </a>
                     <a href="#" class="navbar__logo-text">
                         SolidBud</a>
@@ -32,7 +36,7 @@
                     <a href="#contact" class="navbar__list-item">Kontakt</a>
                 </div>
 
-                <button class="burger">
+                <button class="burger" aria-label="Otwórz menu nawigacyjne">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
@@ -47,7 +51,7 @@
                 <h1 class="header__box-heading">Tworzymy Twoją <span>Przyszłość</span></h1>
                 <h2 class="header__box-text">Zaufaj naszej solidnej budowlanej marce i zrealizuj swoje marzenia o
                     doskonałym domu.</h2>
-                <a href="#services" class="header__box-button">Rozpocznij projekt</a>
+                <a href="#services" class="button first-button header__box-button" >Rozpocznij projekt</a>
             </div>
         </div>
     </header>
@@ -65,7 +69,7 @@
 
                 <div class="about__us-box">
                     <div class="about__img">
-                        <img src="./dist/img/oFirmie.jpg" alt="" srcset="">
+                        <img src="./dist/img/oFirmie.webp" alt="" width="300" height="200" loading="lazy">
                     </div>
                     <div class="about__text">
                         <h3>Historia firmy</h3>
@@ -80,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="main__values">
+            <div class="main__values" >
                 <div class="container">
                     <div class="shape square__second"></div>
 
@@ -135,7 +139,9 @@
                 <div class="about__us-box our_mission">
 
                     <div class="about__img about__img--right">
-                        <img src="./dist/img/jeriden-villegas-VLPUm5wP5Z0-unsplash.jpg" alt="" srcset="">
+                        <img src="./dist/img/aboutUs2Small.webp" alt="" width="300" height="200" srcset="./dist/img/aboutUs2Medium.webp 300w,
+                        ./dist/img/aboutUs2Medium.webp 600w,
+                        ./dist/img/aboutUs2Medium.webp 1200w" loading="lazy">
                     </div>
                     <div class="about__text about__text--right">
                         <h3>Nasza misja</h3>
@@ -157,7 +163,7 @@
                         które nie tylko spełniają oczekiwania naszych klientów, ale także przyczyniają się do
                         tworzenia
                         trwałych wartości dla społeczności, w których działamy.</p>
-                    <a href="#portfolio" class="our__commitment-button">Sprawdź Portfolio</a>
+                    <a href="#portfolio" class="button secondary-button our__commitment-button">Sprawdź Portfolio</a>
                 </div>
             </div>
 
@@ -174,21 +180,21 @@
                 <div class="services__cards">
                     <div class="services__card services__card--first">
                         <p>Budownictwo mieszkalne</p>
-                        <a class="services__card-button" href="#contact">
+                        <a class="services__card-button tertiary-button button" href="#contact">
                             Zapytaj o Usługe
                         </a>
                     </div>
                     <div class="services__card services__card--second">
                         <p>Konstrukcje <br>stalowe i betonowe</p>
 
-                        <a class="services__card-button" href="#contact">
+                        <a class="services__card-button tertiary-button button" href="#contact">
                             Zapytaj o Usługe
                         </a>
                     </div>
                     <div class="services__card services__card--third">
                         <p>Usługi wykończeniowe</p>
 
-                        <a class="services__card-button" href="#contact">
+                        <a class="services__card-button tertiary-button button" href="#contact">
                             Zapytaj o Usługe
                         </a>
                     </div>
@@ -208,7 +214,8 @@
                 </div>
 
                 <div class="portfolio__projects">
-                    <div class="portfolio__project portfolio__project--first fade-in">
+                    <div class="portfolio__project portfolio__project--first fade-in" loading="lazy">
+
                         <p class="portfolio__project-text">
                             Wzorcowy Apartament Wypoczynkowy
                         </p>
@@ -217,7 +224,7 @@
                             wnętrz.
                         </p>
                     </div>
-                    <div class="portfolio__project portfolio__project--second fade-in">
+                    <div class="portfolio__project portfolio__project--second fade-in" loading="lazy">
                         <p class="portfolio__project-text">
                             Eko-Dom na Wzgórzu
                         </p>
@@ -225,7 +232,7 @@
                             Przestronny, energooszczędny dom z widokiem na góry, zintegrowany z naturalnym otoczeniem.
                         </p>
                     </div>
-                    <div class="portfolio__project portfolio__project--third fade-in">
+                    <div class="portfolio__project portfolio__project--third fade-in" loading="lazy">
                         <p class="portfolio__project-text">
                             Nowoczesny Budynek Biurowy Centrum Miasta
                         </p>
@@ -234,7 +241,7 @@
                             centrum biznesowego.
                         </p>
                     </div>
-                    <div class="portfolio__project portfolio__project--fourth fade-in">
+                    <div class="portfolio__project portfolio__project--fourth fade-in" loading="lazy">
                         <p class="portfolio__project-text">
                             Rewitalizacja Historycznego Dworu
                         </p>
@@ -243,7 +250,7 @@
                             architektonicznego.
                         </p>
                     </div>
-                    <div class="portfolio__project portfolio__project--fifth fade-in">
+                    <div class="portfolio__project portfolio__project--fifth fade-in" loading="lazy">
                         <p class="portfolio__project-text">
                             Innowacyjne Osiedle Mieszkaniowe
                         </p>
@@ -252,7 +259,7 @@
                             inteligentnego domu.
                         </p>
                     </div>
-                    <div class="portfolio__project portfolio__project--sixth fade-in">
+                    <div class="portfolio__project portfolio__project--sixth fade-in" loading="lazy">
                         <p class="portfolio__project-text">
                             Zrównoważony Ośrodek Rekreacyjny
                         </p>
@@ -261,32 +268,7 @@
                             atrakcje dla gości.
                         </p>
                     </div>
-                    <div class="portfolio__project portfolio__project--seventh fade-in">
-                        <p class="portfolio__project-text">
-                            Nowoczesna Hala Sportowa dla Miejscowej Szkoły
-                        </p>
-                        <p class="portfolio__project-description">
-                            Przestronna hala sportowa z zaawansowaną infrastrukturą sportową, służąca miejscowej
-                            społeczności szkolnej.
-                        </p>
-                    </div>
-                    <div class="portfolio__project portfolio__project--eighth fade-in">
-                        <p class="portfolio__project-text">
-                            Renowacja Zabytkowego Kościoła Parafialnego
-                        </p>
-                        <p class="portfolio__project-description">
-                            Restauracja i modernizacja historycznego kościoła, zachowując jego architektoniczne
-                            dziedzictwo.
-                        </p>
-                    </div>
-                    <div class="portfolio__project portfolio__project--ninth fade-in">
-                        <p class="portfolio__project-text">
-                            Luksusowy Apartamentowiec w Centrum Metropolii
-                        </p>
-                        <p class="portfolio__project-description">
-                            Wysokiej klasy apartamentowiec oferujący luksusowe mieszkania z widokiem na panoramę miasta.
-                        </p>
-                    </div>
+
 
                 </div>
             </div>
@@ -296,21 +278,23 @@
             <div class="container">
                 <div class="our__scores">
                     <div class="score">
-                        <img src="./dist/img/clients.png" alt="" class="score__img">
+                        <img src="./dist/img/clients.png" alt="" class="score__img" loading="lazy" width="50"
+                            height="50">
                         <p class="score__text">
                             <span class="score__number">1130</span><br>
                             Zadowolonych <br>klientów
                         </p>
                     </div>
                     <div class="score">
-                        <img src="./dist/img/like.png" alt="" class="score__img">
+                        <img src="./dist/img/like.png" alt="" class="score__img" loading="lazy" width="50" height="50">
                         <p class="score__text">
                             <span class="score__number">7.2K</span><br>
                             Polubień
                         </p>
                     </div>
                     <div class="score">
-                        <img src="./dist/img/rating.png" alt="" class="score__img">
+                        <img src="./dist/img/rating.png" alt="" class="score__img" loading="lazy" width="50"
+                            height="50">
                         <p class="score__text">
                             <span class="score__number">1120</span><br>
                             Pozytywnych<br> opinii
@@ -331,7 +315,7 @@
                 </div>
                 <div class="accordion">
                     <button class="accordion-btn-category">
-                        <span>O firmie</span><img src="./dist/img/arrow-down.svg" alt="" srcset=""
+                        <span>O firmie</span><img src="./dist/img/arrow-down.svg" alt="" width="50" height="50"
                             class="przycisk123"></button>
 
                     <div class="accordion-article">
@@ -339,7 +323,7 @@
                             <button class="accordion-btn">
 
                                 Jak długo firma istnieje na rynku budowlanym? <img src="./dist/img/plus-svgrepo-com.svg"
-                                    alt="" srcset="" class="przycisk123"></button>
+                                    alt="" width="50" height="50" class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Nasza firma istnieje na rynku budowlanym od ponad 20 lat,
                                     zyskując zaufanie klientów poprzez solidność i wysoką jakość usług.</p>
@@ -348,7 +332,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 W jakich obszarach geograficznych firma świadczy usługi budowlane?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Nasze usługi budowlane obejmują obszar metropolitalny
                                     oraz określone stany lub regiony kraju.</p>
@@ -357,7 +342,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jakie są główne wartości i filozofia firmy budowlanej?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Nasze główne wartości to profesjonalizm, innowacyjność
                                     oraz zaangażowanie w realizację projektów zgodnie z najwyższymi standardami jakości.
@@ -367,13 +353,14 @@
                     </div>
                     <!-- kategoria druga -->
                     <button class="accordion-btn-category">
-                        <span>Usługi</span><img src="./dist/img/arrow-down.svg" alt="" srcset=""
+                        <span>Usługi</span><img src="./dist/img/arrow-down.svg" alt="" width="50" height="50"
                             class="przycisk123"></button>
                     <div class="accordion-article">
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jakie rodzaje usług budowlanych oferuje firma? <img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Oferujemy kompleksowe usługi budowlane, w tym budownictwo
                                     mieszkalne, komercyjne, remonty, modernizacje oraz projektowanie architektoniczne.
@@ -383,7 +370,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy firma zajmuje się również usługami projektowania architektonicznego?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Tak, nasz zespół doświadczonych architektów zajmuje się
                                     projektowaniem architektonicznym zgodnie z oczekiwaniami i potrzebami klientów.</p>
@@ -392,7 +380,7 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy firma oferuje usługi związane z remontami oraz modernizacją istniejących
-                                budynków?<img src="./dist/img/plus-svgrepo-com.svg" alt="" srcset=""
+                                budynków?<img src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
                                     class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Oczywiście, nasza firma specjalizuje się również w
@@ -404,13 +392,14 @@
                     </div>
                     <!-- kat 3 -->
                     <button class="accordion-btn-category">
-                        <span>Proces budowy</span><img src="./dist/img/arrow-down.svg" alt="" srcset=""
+                        <span>Proces budowy</span><img src="./dist/img/arrow-down.svg" alt="" width="50" height="50"
                             class="przycisk123"></button>
                     <div class="accordion-article">
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jak długo trwa typowy proces budowy od etapu planowania do ukończenia? <img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Czas trwania procesu budowy zależy od skali i złożoności
                                     projektu, jednak staramy się zapewnić terminową realizację projektów zgodnie z
@@ -421,7 +410,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jak wygląda proces współpracy z klientem podczas realizacji projektu budowlanego?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Nasza firma zapewnia regularne aktualizacje dotyczące
                                     postępu
@@ -433,7 +423,7 @@
                             <button class="accordion-btn">
                                 Jakie kroki podejmuje firma w celu zapewnienia wysokiej jakości i terminowości
                                 realizacji
-                                projektu?<img src="./dist/img/plus-svgrepo-com.svg" alt="" srcset=""
+                                projektu?<img src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
                                     class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Nasze procedury kontrolne zapewniają wysoką jakość
@@ -444,13 +434,14 @@
                         </div>
                     </div>
                     <button class="accordion-btn-category">
-                        <span>Koszty</span><img src="./dist/img/arrow-down.svg" alt="" srcset=""
+                        <span>Koszty</span><img src="./dist/img/arrow-down.svg" alt="" width="50" height="50"
                             class="przycisk123"></button>
                     <div class="accordion-article">
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jak firma wycenia projekty budowlane i remontowe? <img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Wycena projektów uwzględnia różnorodne czynniki, takie
                                     jak
@@ -462,7 +453,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy istnieje możliwość dostosowania projektu do określonego budżetu klienta?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Tak, jesteśmy otwarci na współpracę z klientem w celu
                                     dostosowania projektu do określonego budżetu, jednocześnie zapewniając wysoką jakość
@@ -473,7 +465,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy firma oferuje różne modele finansowania dla projektów budowlanych?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Oczywiście, oferujemy różne modele finansowania, w tym
                                     elastyczne plany płatności, dostosowane do potrzeb i możliwości finansowych klienta,
@@ -485,14 +478,14 @@
 
 
                     <button class="accordion-btn-category">
-                        <span>Projektowanie</span><img src="./dist/img/arrow-down.svg" alt="" srcset=""
+                        <span>Projektowanie</span><img src="./dist/img/arrow-down.svg" alt="" width="50" height="50"
                             class="przycisk123"></button>
                     <div class="accordion-article">
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jak długo trwa proces projektowania architektonicznego i czy firma współpracuje z
-                                zewnętrznymi architektami?<img src="./dist/img/plus-svgrepo-com.svg" alt="" srcset=""
-                                    class="przycisk123"></button>
+                                zewnętrznymi architektami?<img src="./dist/img/plus-svgrepo-com.svg" alt="" width="50"
+                                    height="50" class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Proces projektowania architektonicznego trwa od kilku
                                     tygodni
@@ -505,7 +498,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy firma oferuje usługi projektowania wnętrz oraz zagospodarowania terenu?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Tak, nasze usługi projektowania wnętrz i zagospodarowania
                                     terenu są oparte na kreatywnym podejściu, uwzględniającym indywidualne preferencje i
@@ -515,7 +509,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy istnieje możliwość personalizacji projektu zgodnie z preferencjami klienta?<img
-                                    src="./dist/img/plus-svgrepo-com.svg" alt="" srcset="" class="przycisk123"></button>
+                                    src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
+                                    class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Oczywiście, nasza firma dąży do spełnienia oczekiwań
                                     klienta
@@ -526,13 +521,13 @@
                         </div>
                     </div>
                     <button class="accordion-btn-category">
-                        <span>Zrównoważone budownictwo</span><img src="./dist/img/arrow-down.svg" alt="" srcset=""
-                            class="przycisk123"></button>
+                        <span>Zrównoważone budownictwo</span><img src="./dist/img/arrow-down.svg" alt="" width="50"
+                            height="50" class="przycisk123"></button>
                     <div class="accordion-article">
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy firma stosuje praktyki zrównoważonego budownictwa i ekologiczne materiały w swoich
-                                projektach?<img src="./dist/img/plus-svgrepo-com.svg" alt="" srcset=""
+                                projektach?<img src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
                                     class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Tak, nasza firma konsekwentnie stosuje praktyki
@@ -544,7 +539,7 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Jakie są korzyści ekologiczne i ekonomiczne związane z inwestowaniem w zrównoważone
-                                budownictwo?<img src="./dist/img/plus-svgrepo-com.svg" alt="" srcset=""
+                                budownictwo?<img src="./dist/img/plus-svgrepo-com.svg" alt="" width="50" height="50"
                                     class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Inwestowanie w zrównoważone budownictwo przyczynia się do
@@ -556,8 +551,8 @@
                         <div class="accordion-box">
                             <button class="accordion-btn">
                                 Czy firma posiada certyfikaty lub akredytacje potwierdzające zgodność z normami
-                                zrównoważonego budownictwa?<img src="./dist/img/plus-svgrepo-com.svg" alt="" srcset=""
-                                    class="przycisk123"></button>
+                                zrównoważonego budownictwa?<img src="./dist/img/plus-svgrepo-com.svg" alt="" width="50"
+                                    height="50" class="przycisk123"></button>
                             <div class="accordion-info">
                                 <p class="accordion-info-text">Oczywiście, nasza firma posiada szereg certyfikatów i
                                     akredytacji, które potwierdzają nasze zaangażowanie w praktyki zrównoważonego
@@ -571,7 +566,7 @@
 
                         <p class="accordion__contact-text">Nie znalazłeś interesującego ciebie pytania?<br>
                             Napisz bezpośrednio do nas!</p>
-                        <a href="#contact" class="accordion__contact-button">Skontaktuj się z nami!</a>
+                        <a href="#contact" class="button tertiary-button accordion__contact-button">Skontaktuj się z nami!</a>
                     </div>
                 </div>
             </div>
@@ -591,7 +586,7 @@
                             <div class="slide">
                                 <div class="card3 active">
                                     <div class="avatar3">
-                                        <img src="./dist/img/people-first.jpg" alt="Avatar">
+                                        <img src="./dist/img/people-first.jpg" alt="Avatar" loading="lazy">
                                     </div>
                                     <p class="review">Zespół SolidBud przeprowadził rewelacyjny remont mojego
                                         mieszkania. Profesjonalizm i dbałość o szczegóły sprawiły, że efekt końcowy
@@ -602,7 +597,7 @@
                             <div class="slide">
                                 <div class="card3">
                                     <div class="avatar3">
-                                        <img src="./dist/img/people-secondM.jpg" alt="Avatar">
+                                        <img src="./dist/img/people-secondM.jpg" alt="Avatar" loading="lazy">
                                     </div>
                                     <p class="review">Firma budowlana wykazała się ogromnym profesjonalizmem i
                                         zaangażowaniem podczas prac u mnie w domu. Gorąco polecam!</p>
@@ -612,7 +607,7 @@
                             <div class="slide">
                                 <div class="card3">
                                     <div class="avatar3">
-                                        <img src="./dist/img/people-thirdM.jpg" alt="Avatar">
+                                        <img src="./dist/img/people-thirdM.jpg" alt="Avatar" loading="lazy">
                                     </div>
                                     <p class="review">Jestem mile zaskoczony wysokim standardem usług tej firmy
                                         budowlanej. Współpraca przebiegła sprawnie, a efekt końcowy przekroczył moje
@@ -650,11 +645,10 @@
 
 
 
-
-        <section class="newsletter-section padding-section">
+        <!-- <section class="newsletter-section padding-section">
             <div class="container">
                 <div class="newsletter">
-                    <h4 class="newsletter-heading">Newsletter</h4>
+                    <h2 class="newsletter-heading">Newsletter</h2>
                     <p class="newsletter__text">Zapisz się do newslettera, by otrzymywać regularne aktualizacje o
                         naszych projektach, najnowszych trendach i ekskluzywnych ofertach dla subskrybentów.</p>
 
@@ -664,7 +658,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="contact padding-section" id="contact">
             <div class="container">
@@ -681,38 +675,51 @@
                         <div class="forms">
 
                             <div class="contact__box">
-                                <img src="./dist/img/contact-person.svg" alt="" class="xd">
+                                <img src="./dist/img/contact-person.svg" alt="" class="xd" width="50" height="50">
 
-                                <input type="text" id="contact-name" class="contact__input" name="contact-name"
-                                    placeholder='Imię' required>
+                                <label for="contact-name">
+                                    <input type="text" id="contact-name" class="contact__input" name="contact-name"
+                                        placeholder='Imię' required>
+                                </label>
                                 <!-- <label for="contact-name" class="contact__label">Imię</label> -->
                             </div>
                             <div class="contact__box">
-                                <img src="./dist/img/email-svgrepo-com (2).svg" alt="" class="xd">
+                                <img src="./dist/img/email-svgrepo-com (2).svg" alt="" class="xd" width="50"
+                                    height="50">
+                                <label for="contact-mail">
 
-                                <input type="text" id="contact-mail" class="contact__input" name="contact-mail" required
-                                    placeholder="E-mail">
+                                    <input type="text" id="contact-mail" class="contact__input" name="contact-mail"
+                                        required placeholder="E-mail">
+                                </label>
                                 <!-- <label for="contact-mail" class="contact__label">Adres mailowy</label> -->
                             </div>
                             <div class="contact__box">
-                                <img src="./dist/img/sort-by-alphabet-svgrepo-com.svg" alt="" class="xd">
-                                <input type="text" id="contact-mail" class="contact__input" name="contact-subject"
-                                    required placeholder="Temat wiadomości">
+                                <img src="./dist/img/sort-by-alphabet-svgrepo-com.svg" alt="" class="xd" width="50"
+                                    height="50">
+                                <label for="contact-title">
+
+                                    <input type="text" id="contact-title" class="contact__input" name="contact-subject"
+                                        required placeholder="Temat wiadomości">
+                                </label>
                                 <!-- <label for="contact-subject" class="contact__label">Temat wiadomości</label> -->
                             </div>
                             <div class="contact__box">
                                 <!-- <p>&#x1F4E9;Wiadomość</p> -->
-                                <span><img src="./dist/img/message-square-lines-alt-svgrepo-com.svg" alt="" class="xd">
-                                    Wiadomość</span>
-                                <textarea name="contact-msg" class="contact__textarea" id="contact-msg" cols="30"
-                                    rows="20" required></textarea>
+
+                                <label for="contact-msg">
+                                    <span><img src="./dist/img/message-square-lines-alt-svgrepo-com.svg" alt=""
+                                            class="xd" width="50" height="50">
+                                        Wiadomość</span>
+                                    <textarea name="contact-msg" class="contact__textarea" id="contact-msg" cols="30"
+                                        rows="20" required></textarea>
+                                </label>
                                 <!-- <label for="contact-msg" class="contact__label">Treść wiadomości</label> -->
                             </div>
                             <button class="contact__btn btn-special-animation" type="submit"
                                 name="contact-submit">Wyślij</button>
                         </div>
                         <div class="contact__form-img">
-                            <img src="./dist/img/Contact us-amico.png" alt="" srcset="">
+                            <img src="./dist/img/Contact us-amico.png" alt="" width="50" height="50" loading="lazy">
                         </div>
                     </form>
                 </div>
@@ -738,9 +745,9 @@
                 <div class="footer__row footer__row--middle">
                     <p>Bądź z nami na bieżąco!</p>
                     <div class="logo__container">
-                        <img src="./dist/img/twitter.png" alt="">
-                        <img src="./dist/img/facebook.png" alt="">
-                        <img src="./dist/img/instagram.png" alt="">
+                        <img src="./dist/img/twitter.png" alt="" loading="lazy" width="50" height="50">
+                        <img src="./dist/img/facebook.png" alt="" loading="lazy" width="50" height="50">
+                        <img src="./dist/img/instagram.png" alt="" loading="lazy" width="50" height="50">
                     </div>
                 </div>
 
@@ -754,7 +761,7 @@
         </div>
         <p class="footer__copyright">&copy; 2023 Firma Budowlana SolidBud. Wszelkie prawa zastrzeżone.</p>
     </footer>
-    <script src="dist/js/main.min.js"></script>
+    <script defer src="./dist/js/main.min.js"></script>
 </body>
 
 </html>
