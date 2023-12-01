@@ -1,0 +1,136 @@
+.forms {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.xd {
+	width: 30px;
+}
+.contact {
+	&__input {
+		position: relative;
+		width: 100%;
+		border: none;
+		outline: none;
+		padding: 0.5em 0;
+		font-size: 1.6rem;
+		background-color: #fff;
+		// 2
+		z-index: 30;
+		padding-left: 5px;
+	}
+	&__box {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		margin: 2em 0;
+		border-bottom: 2px solid #000;
+		z-index: 30;
+		// &::after {
+		// 	position: absolute;
+		// 	content: "";
+		// 	bottom: 0;
+		// 	left: -20px;
+		// 	background-color: red;
+		// 	width: 50px;
+		// 	height: 50px;
+		// 	z-index: -1;
+		// }
+		&:last-of-type {
+			flex-direction: column;
+			border-bottom: none;
+			align-items: center;
+
+			& span {
+				display: flex;
+				align-items: center;
+				font-size: 1.6rem;
+				color: #494949;
+				margin: 1em 0;
+				& img {
+					margin-right: 0.5em;
+				}
+			}
+		}
+	}
+
+	&__textarea {
+		width: 100%;
+		resize: vertical;
+		min-height: 250px;
+		max-height: 400px;
+		border: 2px solid #000;
+		padding: 2em;
+		outline: none;
+	}
+	&__btn {
+		border: none;
+		outline: none;
+		width: 100%;
+		padding: 0.8em 1.6em;
+		background-color: #323232;
+		font-size: 1.6rem;
+		// 2r
+		color: #fff;
+		font-family: Montserrat;
+		text-transform: uppercase;
+		font-variant: small-caps;
+		font-weight: bold;
+		cursor: pointer;
+		// 2r
+	}
+	&__form {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		// border: 2px solid #000;
+		padding: 2em;
+		margin: 0 auto;
+		width: 90%;
+
+		&-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2em;
+			width: 100%;
+			height: auto;
+			& img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		& h3 {
+			font-size: 2rem;
+			// 2rem
+			text-align: center;
+		}
+
+		& p {
+			font-size: 1.8rem;
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+}
+
+.form__box {
+	text-align: center;
+	& h3 {
+		display: none;
+		position: relative;
+		font-size: 2.4rem;
+		margin-bottom: 4em;
+		text-transform: uppercase;
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: -20px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 25%;
+			background-color: #f0eb77;
+			height: 3px;
+		}
+	}
+}

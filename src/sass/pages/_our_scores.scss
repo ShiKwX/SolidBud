@@ -1,0 +1,38 @@
+.numbers {
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	border-top: 2px solid #f4f4f4;
+	padding: 3em 0;
+	margin-bottom: 12em;
+}
+.our__scores {
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+.score {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2em 0;
+	gap: 2em;
+	&__img {
+		width: 50px;
+	}
+	&__text {
+		text-align: center;
+		font-size: 1.4rem;
+		font-weight: bold;
+		& span {
+			color: #a939d5;
+			// color: gold;
+		}
+	}
+	&__number {
+		font-size: 2.8rem;
+		font-weight: bold;
+	}
+}

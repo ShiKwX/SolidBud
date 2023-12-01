@@ -1,0 +1,43 @@
+.section__box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 600;
+	padding: 4em 1em;
+	&-heading {
+		position: relative;
+		margin: 1em 0;
+		color: #000;
+		font-size: 2.2rem;
+		// 3.5rem
+		text-transform: uppercase;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			width: 50px;
+			height: 50%;
+		}
+		&::before {
+			top: -15px;
+			left: -30px;
+			border-top: 4px solid #000;
+			border-left: 4px solid #000;
+		}
+		&::after {
+			bottom: -15px;
+			right: -30px;
+			border-bottom: 4px solid #000;
+			border-right: 4px solid #000;
+		}
+	}
+	&-text {
+		color: #686868;
+		font-size: 1.4rem;
+		// 2rem
+	}
+}

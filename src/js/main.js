@@ -81,7 +81,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 			cards.forEach((card, index) => {
 				setTimeout(() => {
 					card.style.opacity = 1
-				}, index * 500) // Delay for each card
+				}, index * 350) // Delay for each card
 			})
 			observer.unobserve(entry.target)
 		}
@@ -96,10 +96,10 @@ let mouseDown = false
 let startX
 let sliderContainer = document.querySelector(".slider")
 let slider = document.querySelector(".slider")
-let autoSlideInterval;
+let autoSlideInterval
 const prevBtn = document.querySelector(".arrow-prev")
 const nextBtn = document.querySelector(".arrow-next")
-const arrows = document.querySelectorAll('.arrow')
+const arrows = document.querySelectorAll(".arrow")
 sliderContainer.addEventListener("mousedown", handleMouseDown)
 sliderContainer.addEventListener("mouseup", handleMouseUp)
 sliderContainer.addEventListener("mousemove", handleMouseMove)
@@ -167,20 +167,44 @@ function showSlides(n) {
 }
 function startAutoSlide() {
 	autoSlideInterval = setInterval(() => {
-        nextSlide();
-    }, 3000);
+		nextSlide()
+	}, 3000)
 }
 showSlides(slideIndex)
 startAutoSlide()
 
-
 nextBtn.addEventListener("click", nextSlide)
 prevBtn.addEventListener("click", prevSlide)
-arrows.forEach(btn=>{
-	btn.addEventListener('mouseenter',()=>{
-		clearInterval(autoSlideInterval);
+arrows.forEach((btn) => {
+	btn.addEventListener("mouseenter", () => {
+		clearInterval(autoSlideInterval)
 	})
-	btn.addEventListener('mouseleave',()=>{
-		startAutoSlide();
+	btn.addEventListener("mouseleave", () => {
+		startAutoSlide()
 	})
+})
+
+// animacje testy
+document.addEventListener("DOMContentLoaded", function () {
+	const section = document.querySelector(".services")
+	const firstServicesCard = section.querySelector(".services__card--first")
+	const secondServicesCard = section.querySelector(".services__card--second")
+	const thirdServicesCard = section.querySelector(".services__card--third")
+
+	const observer = new IntersectionObserver(
+		function (entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					section.classList.add("fade-inS")
+					firstServicesCard.classList.add("fade-in-from-left")
+					secondServicesCard.classList.add("fade-in-opacity")
+					thirdServicesCard.classList.add("fade-in-from-right")
+					observer.unobserve(entry.target)
+				}
+			})
+		},
+		{ threshold: 0.5 }
+	)
+
+	observer.observe(section)
 })
