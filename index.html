@@ -14,7 +14,7 @@
     <meta name="description"
         content="Firma budowlana SolidBud - Twoi zaufani partnerzy w budowie i remontach. Oferujemy kompleksowe usługi budowlane, remontowe i wykończeniowe. Zrealizujemy Twój projekt z najwyższą jakością i terminowością. Skontaktuj się z nami już dziś!">
     <link rel="stylesheet" href="./dist/css/style.min.css">
-    <link rel="preload" href="./dist/img/heroImageSmall.webp" fetchpriority="high" as="image">
+    <link rel="preload" href="./dist/img/header2Small.webp" fetchpriority="high" as="image">
 </head>
 
 <body>
@@ -51,7 +51,13 @@
                 <h1 class="header__box-heading">Tworzymy Twoją <span>Przyszłość</span></h1>
                 <h2 class="header__box-text">Zaufaj naszej solidnej budowlanej marce i zrealizuj swoje marzenia o
                     doskonałym domu.</h2>
-                <a href="#services" class="button first-button header__box-button" >Rozpocznij projekt</a>
+                <div class="header__box-buttons">
+
+                    <a href="#services" class="button header__box-button header__box-buttons--first">Rozpocznij
+                        projekt</a>
+                    <a href="#portfolio" class="button header__box-button header__box-buttons--second">Sprawdź
+                        realizacje</a>
+                </div>
             </div>
         </div>
     </header>
@@ -60,14 +66,16 @@
     <main class="main">
 
         <section class="about__us padding-section" id="about__us">
-            <div class="container">
-                <div class="shape square__first"></div>
+            <div class="container shapes__container">
+                <div class="shape about__us-shape--first"></div>
+                <div class="shape about__us-shape--second"></div>
                 <div class="section__box">
                     <h2 class="section__box-heading">O firmie</h2>
                     <p class="section__box-text">Nasza historia i wartości</p>
                 </div>
 
                 <div class="about__us-box">
+
                     <div class="about__img">
                         <img src="./dist/img/oFirmie.webp" alt="" width="300" height="200" loading="lazy">
                     </div>
@@ -84,12 +92,9 @@
                 </div>
             </div>
 
-            <div class="main__values" >
+            <div class="main__values">
                 <div class="container">
-                    <div class="shape square__second"></div>
 
-                    <div class="shape square__third"></div>
-                    <div class="shape square__fourth"></div>
                     <h3>Główne wartości</h3>
                     <ul class="main__values-list">
                         <li class="main__values-list--item">
@@ -120,21 +125,6 @@
 
             </div>
 
-            <!-- <div class="our__mission">
-                <div class="our__mission-box">
-                    <div class="our__mission-box--img">
-                        <img src="#" alt="" srcset="">
-                    </div>
-                    <div class="our__mission-box-text">
-                        <h4>Nasza misja</h4>
-                        <p>Naszą misją jest tworzenie trwałych, innowacyjnych oraz funkcjonalnych przestrzeni, które
-                            przyczyniają się do poprawy jakości życia naszych klientów oraz społeczności lokalnych. </p>
-                        <p>Dążymy do ciągłego doskonalenia procesów budowlanych poprzez innowacyjne podejście, przyjazne
-                            dla środowiska praktyki oraz partnerstwo oparte na zaufaniu z naszymi klientami i
-                            dostawcami.</p>
-                    </div>
-                </div>
-            </div> -->
             <div class="container">
                 <div class="about__us-box our_mission">
 
@@ -153,8 +143,6 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
         <div class="our__commitment">
             <div class="container">
@@ -169,9 +157,9 @@
 
         </div>
         <section class="services padding-section" id="services">
-            <div class="container">
-                <div class="shape square__third"></div>
-                <div class="shape square__fourth"></div>
+            <div class="container shapes__container">
+                <div class="shape services__shape--first"></div>
+                <div class="shape services__shape--second"></div>
                 <div class="section__box">
                     <h2 class="section__box-heading">Usługi</h2>
                     <p class="section__box-text">Szeroka gama usług</p>
@@ -204,11 +192,10 @@
 
         <section class="portfolio padding-section" id="portfolio">
             <div class="container">
-                <div class="shape square__first"></div>
-                <div class="shape square__second"></div>
+
                 <div class="section__box">
                     <h2 class="section__box-heading">Portfolio</h2>
-                    <p class="section__box-text">Zobacz nasze osiągnięcia i przekonaj się, że <br> jakość to nasza
+                    <p class="section__box-text">Zobacz nasze projekty i przekonaj się, że <br> jakość to nasza
                         nadrzędna
                         wartość</p>
                 </div>
@@ -306,9 +293,8 @@
 
         <section class="faq padding-section">
             <div class="container  shapes__container">
-                <div class="shape square__xd1"></div>
-                <div class="shape square__xd"></div>
-                <div class="shape square__xd3"></div>
+                <div class="shape faq__shape--first"></div>
+                <div class="shape faq__shape--second"></div>
                 <div class="section__box">
                     <h2 class="section__box-heading">Faq</h2>
                     <p class="section__box-text">Najczęściej zadawane pytania</p>
@@ -566,7 +552,8 @@
 
                         <p class="accordion__contact-text">Nie znalazłeś interesującego ciebie pytania?<br>
                             Napisz bezpośrednio do nas!</p>
-                        <a href="#contact" class="button tertiary-button accordion__contact-button">Skontaktuj się z nami!</a>
+                        <a href="#contact" class="button tertiary-button accordion__contact-button">Skontaktuj się z
+                            nami!</a>
                     </div>
                 </div>
             </div>
@@ -661,71 +648,80 @@
         </section> -->
 
         <section class="contact padding-section" id="contact">
-            <div class="container">
-                <div class="section__box">
-                    <h2 class="section__box-heading">Kontakt</h2>
-                    <p class="section__box-text">Skontaktuj się z nami, aby rozpocząć współpracę. <br>Jesteśmy tu, aby
-                        Ci pomóc</p>
-                </div>
-                <div class="form__box">
-                    <h3>Wypełnij formularz w celu skontaktowania się z nami.</h3>
-
-                    <form action="#" class="contact__form">
-
-                        <div class="forms">
-
-                            <div class="contact__box">
-                                <img src="./dist/img/contact-person.svg" alt="" class="xd" width="50" height="50">
-
-                                <label for="contact-name">
-                                    <input type="text" id="contact-name" class="contact__input" name="contact-name"
-                                        placeholder='Imię' required>
-                                </label>
-                                <!-- <label for="contact-name" class="contact__label">Imię</label> -->
-                            </div>
-                            <div class="contact__box">
-                                <img src="./dist/img/email-svgrepo-com (2).svg" alt="" class="xd" width="50"
-                                    height="50">
-                                <label for="contact-mail">
-
-                                    <input type="text" id="contact-mail" class="contact__input" name="contact-mail"
-                                        required placeholder="E-mail">
-                                </label>
-                                <!-- <label for="contact-mail" class="contact__label">Adres mailowy</label> -->
-                            </div>
-                            <div class="contact__box">
-                                <img src="./dist/img/sort-by-alphabet-svgrepo-com.svg" alt="" class="xd" width="50"
-                                    height="50">
-                                <label for="contact-title">
-
-                                    <input type="text" id="contact-title" class="contact__input" name="contact-subject"
-                                        required placeholder="Temat wiadomości">
-                                </label>
-                                <!-- <label for="contact-subject" class="contact__label">Temat wiadomości</label> -->
-                            </div>
-                            <div class="contact__box">
-                                <!-- <p>&#x1F4E9;Wiadomość</p> -->
-
-                                <label for="contact-msg">
-                                    <span><img src="./dist/img/message-square-lines-alt-svgrepo-com.svg" alt=""
-                                            class="xd" width="50" height="50">
-                                        Wiadomość</span>
-                                    <textarea name="contact-msg" class="contact__textarea" id="contact-msg" cols="30"
-                                        rows="20" required></textarea>
-                                </label>
-                                <!-- <label for="contact-msg" class="contact__label">Treść wiadomości</label> -->
-                            </div>
-                            <button class="contact__btn btn-special-animation" type="submit"
-                                name="contact-submit">Wyślij</button>
-                        </div>
-                        <div class="contact__form-img">
-                            <img src="./dist/img/Contact us-amico.png" alt="" width="50" height="50" loading="lazy">
-                        </div>
-                    </form>
-                </div>
-
+            <div class="section__box">
+                <h2 class="section__box-heading">Kontakt</h2>
+                <p class="section__box-text">Skontaktuj się z nami, aby rozpocząć współpracę. <br>Jesteśmy tu, aby
+                    Ci pomóc</p>
             </div>
 
+            <div class="form__box">
+
+                <div class="container shapes__container">
+
+
+                    <form action="#" class="form-container">
+                        <div class="shape form__box-shape--first"></div>
+                        <div class="shape form__box-shape--second"></div>
+                        <div class="shape form__box-shape--third"></div>
+
+                        <div class="row1">
+                            <div class="form-container__inputs-box">
+
+                                <!-- Label i input dla imienia -->
+                                <div class="contact__box"> <img src="./dist/img/contact-person.svg" alt="" class="xd"
+                                        width="50" height="50">
+
+                                    <label for="contact-name">
+                                        <input type="text" id="contact-name" name="contact-name" placeholder="Imię"
+                                            class="contact__input"></label>
+                                </div>
+                                <!-- Label i input dla nazwiska -->
+                                <div class="contact__box">
+                                    <img src="./dist/img/email-svgrepo-com (2).svg" alt="" class="xd" width="50"
+                                        height="50">
+                                    <label for="contact-email">
+                                        <input type="text" id="contact-email" name="contact-email" placeholder="Email"
+                                            class="contact__input"></label>
+                                </div>
+
+                                <!-- Label i input dla emaila -->
+                                <div class="contact__box"><img src="./dist/img/sort-by-alphabet-svgrepo-com.svg" alt=""
+                                        class="xd" width="50" height="50">
+                                    <label for="contact-title">
+
+                                        <input type="contact-title" id="contact-title" name="contact-title"
+                                            placeholder="Tytuł wiadomości" class="contact__input">
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- Zdjęcie lub inna zawartość -->
+                                <div class="image-container">
+                                    <img src="./dist/img/Contact us-amico.png" alt="Placeholder"
+                                        style="max-width: 100%;" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2">
+                            <!-- Label i textarea na wiadomość -->
+                            <div class="contact__box message__box">
+                                <label for="message">
+                                    <span><img src="./dist/img/message-square-lines-alt-svgrepo-com.svg" alt=""
+                                            class="xd" width="50" height="50">
+                                        Wiadomość:</span>
+                                </label>
+
+                                <textarea id="message" class="contact__textarea" name="message"
+                                    placeholder="Wiadomość"></textarea>
+                            </div>
+
+                            <!-- Przycisk submit -->
+                            <button type="submit" class="contact__btn">Wyślij</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </section>
     </main>
 
@@ -733,8 +729,8 @@
         <div class="container">
 
             <div class="footer__box">
-                <div class="footer__box-square1 shape"></div>
-                <div class="footer__box-square2 shape"></div>
+                <div class="shape footer__box-shape--first"></div>
+                <div class="shape footer__box-shape--second"></div>
                 <div class="footer__row">
                     <p>Adres firmy: ul. Budowlana 5</p>
                     <p>00-000 Miastopol</p>
