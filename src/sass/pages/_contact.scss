@@ -1,12 +1,17 @@
 .forms {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+	// display: flex;
+	// flex-direction: column;
+	// width: 100%;
+	grid-row: 1; /* Pierwszy rząd */
+	grid-column: 1 / span 2; /* Rozciągnij na dwa miejsca w pierwszym rzędzie */
+	background-color: #ffd700;
 }
 .xd {
 	width: 30px;
 }
 .contact {
+	position: relative;
+
 	&__input {
 		position: relative;
 		width: 100%;
@@ -17,41 +22,24 @@
 		background-color: #fff;
 		// 2
 		z-index: 30;
-		padding-left: 5px;
 	}
 	&__box {
 		position: relative;
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		margin: 2em 0;
 		border-bottom: 2px solid #000;
 		z-index: 30;
-		// &::after {
-		// 	position: absolute;
-		// 	content: "";
-		// 	bottom: 0;
-		// 	left: -20px;
-		// 	background-color: red;
-		// 	width: 50px;
-		// 	height: 50px;
-		// 	z-index: -1;
-		// }
-		&:last-of-type {
-			flex-direction: column;
-			border-bottom: none;
-			align-items: center;
-
-			& span {
-				display: flex;
-				align-items: center;
-				font-size: 1.6rem;
-				color: #494949;
-				margin: 1em 0;
-				& img {
-					margin-right: 0.5em;
-				}
+	
+		& label {
+			width: 100%;
+			& input {
+				padding-left: 0.5em;
 			}
 		}
+	
 	}
 
 	&__textarea {
@@ -76,30 +64,35 @@
 		text-transform: uppercase;
 		font-variant: small-caps;
 		font-weight: bold;
+		transition: 0.3s;
 		cursor: pointer;
+		&:hover {
+			background-color: #fff;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			color: #323232;
+		}
 		// 2r
 	}
 	&__form {
-		display: flex;
-		flex-direction: column-reverse;
-		justify-content: center;
-		// border: 2px solid #000;
-		padding: 2em;
+		position: relative;
+		// display: flex;
+		// flex-direction: column-reverse;
+		// justify-content: center;
+		// // border: 2px solid #000;
+		// padding: 2em;
+
+		display: grid;
+		grid-template-rows: auto auto; /* Dwa rzędy o dynamicznej wysokości */
+		grid-template-columns: repeat(
+			2,
+			1fr
+		); /* Dwa divy obok siebie w pierwszym rzędzie */
+		gap: 10px; /* Odstęp między elementami */
 		margin: 0 auto;
 		width: 90%;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+		background-color: #fff;
 
-		&-img {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 2em;
-			width: 100%;
-			height: auto;
-			& img {
-				width: 100%;
-				height: auto;
-			}
-		}
 		& h3 {
 			font-size: 2rem;
 			// 2rem
@@ -113,8 +106,19 @@
 		}
 	}
 }
-
+.message__box {
+	display: flex;
+	flex-direction: column;
+	border-bottom: none;
+	& span {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		font-size: 1.4rem;
+	}
+}
 .form__box {
+	position: relative;
 	text-align: center;
 	& h3 {
 		display: none;
@@ -131,6 +135,33 @@
 			width: 25%;
 			background-color: #f0eb77;
 			height: 3px;
+		}
+	}
+	&-shape {
+		&--first {
+			top: -40px;
+			left: -40px;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background-color: #f0eb77;
+			z-index: -1;
+		}
+		&--second {
+			top: 15%;
+			transform: rotate(23deg);
+			right: -30px;
+			width: 80px;
+			height: 80px;
+			background-color: #323232;
+		}
+		&--third {
+			bottom: -20px;
+			left: -15px;
+			width: 80px;
+			height: 80px;
+			transform: rotate(13deg);
+			background-color: #ba68c8;
 		}
 	}
 }

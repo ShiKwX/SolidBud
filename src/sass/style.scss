@@ -4,28 +4,21 @@
 @use "layout/header" as *;
 @use "layout/footer" as *;
 @use "layout/section_box" as *;
-@use 'pages/about_us' as *;
-@use 'pages/our_commitment' as *;
-@use 'pages/services' as *;
-@use 'pages/portfolio' as *;
-@use 'pages/our_scores' as *;
-@use 'pages/faq' as *;
-@use 'pages/references' as *;
-@use 'pages/contact' as *;
-@use 'pages/newsletter' as *;
-@use 'layout/decorations' as *;
-@use 'abstracts/animations' as *;
-@use 'components/button' as *;
-
-body {
-	font-family: "Montserrat", sans-serif;
-	background-color: #fff;
-	overflow-x: hidden;
-	width: 100%;
-}
+@use "pages/about_us" as *;
+@use "pages/our_commitment" as *;
+@use "pages/services" as *;
+@use "pages/portfolio" as *;
+@use "pages/our_scores" as *;
+@use "pages/faq" as *;
+@use "pages/references" as *;
+@use "pages/contact" as *;
+@use "pages/newsletter" as *;
+@use "layout/decorations" as *;
+@use "abstracts/animations" as *;
+@use "components/button" as *;
 
 .padding-section {
-	padding-bottom: 6em;
+	padding:6em 0;
 }
 
 .przycisk123 {
@@ -46,12 +39,77 @@ body {
 .active {
 	display: block;
 }
+.form-container {
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto;
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	padding: 2em;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: auto;
+	margin-bottom: 10em;
+	&__inputs {
+		&-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			// height: 80%;
+			// gap: 3em;
+		}
+	}
+}
 
+.row1,
+.row2 {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 150px;
+	max-height: 250px;
+}
+
+@media (min-width: 576px) {
+	.form-container {
+		grid-template-rows: repeat(auto, auto);
+	}
+
+	.row1 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.row2 {
+		grid-template-columns: 1fr;
+	}
+}
+// .image-container {
+// 	text-align: right;
+// }
+
+.image-container img {
+	max-width: 100%;
+}
 // media
 
 @media (min-width: 576px) {
 	.header {
 		&__box {
+			&-buttons {
+				flex-direction: row;
+				margin-top: 2em;
+			}
 			&-heading {
 				font-size: 2.8rem;
 			}
@@ -153,10 +211,10 @@ body {
 
 	.newsletter {
 		&__form {
-			width: 100%;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			width: 100%;
 			&-input {
 				width: 100%;
 				font-size: 1.8rem;
@@ -189,6 +247,9 @@ body {
 		&__textarea {
 			font-size: 1.6rem;
 		}
+		&__btn {
+			width: 35%;
+		}
 	}
 	.footer {
 		&__row {
@@ -202,7 +263,7 @@ body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 	.header {
-		background-image: url("../../dist/img/heroImageMedium.webp");
+		background-image: url("../../dist/img/header2Big.webp");
 		&__box {
 			width: 65%;
 			&-heading {
@@ -235,8 +296,8 @@ body {
 			margin-top: 5em;
 		}
 		&__text {
-			font-size: 1.6rem;
 			padding: 0;
+			font-size: 1.6rem;
 			line-height: normal;
 			&--right {
 				width: 50%;
@@ -269,7 +330,6 @@ body {
 		&__card {
 			width: 30%;
 			min-height: 400px;
-
 			& p {
 				font-size: 1.8rem;
 			}
@@ -277,14 +337,14 @@ body {
 	}
 	.portfolio {
 		&__projects {
+			flex-direction: row;
 			width: 100%;
 			padding: 2em;
-			flex-direction: row;
 		}
 		&__project {
 			width: 45%;
-			min-height: 550px;
 			max-width: 400px;
+			min-height: 550px;
 			&-text {
 				font-size: 2.2rem;
 			}
@@ -307,7 +367,6 @@ body {
 	}
 	.accordion {
 		padding: 4em 8em;
-
 		&-btn {
 			font-size: 1.8rem;
 			&-category {
@@ -350,6 +409,18 @@ body {
 		}
 	}
 	.footer {
+		&__box {
+			&-shape {
+				&--first {
+					bottom: -60px;
+					left: -70px;
+				}
+				&--second {
+					top: -70px;
+					right: -70px;
+				}
+			}
+		}
 		&__row {
 			& p {
 				font-size: 1.8rem;
@@ -358,6 +429,10 @@ body {
 	}
 	.slider {
 		width: 65%;
+	}
+	.shape {
+		width: 110px;
+		height: 110px;
 	}
 }
 
@@ -395,9 +470,9 @@ body {
 	}
 	.about {
 		&__text {
+			padding: 2em 1em;
 			font-size: 1.8rem;
 			line-height: 25px;
-			padding: 2em 1em;
 		}
 		& p {
 			font-size: 1.8rem;
@@ -446,9 +521,9 @@ body {
 		}
 	}
 	.accordion {
-		padding: 4em 8em;
 		width: 80%;
 		margin-bottom: 10em;
+		padding: 4em 8em;
 		&-info {
 			&-text {
 				font-size: 1.6rem;
@@ -477,8 +552,8 @@ body {
 			}
 		}
 		&__text {
-			font-size: 2.2rem;
 			width: 75%;
+			font-size: 2.2rem;
 		}
 		&-heading {
 			font-size: 2.4rem;
@@ -490,12 +565,13 @@ body {
 	}
 	.contact {
 		&__form {
-			width: 100%;
 			flex-direction: row;
+			width: 100%;
 			padding: 3em 8em;
+			margin-bottom: 20em;
 			&-img {
-				padding: 0;
 				width: 50%;
+				padding: 0;
 			}
 		}
 	}
@@ -510,20 +586,23 @@ body {
 			flex-direction: row;
 		}
 		&__row {
-			padding: 2em 4em;
 			width: 100%;
+			padding: 2em 4em;
 			& p {
 				font-size: 2rem;
 			}
 		}
+	}
+	.form-container {
+		width: 75%;
+		padding: 4em 8em;
+		// border: 2px solid #323232;
 	}
 }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
 	.header {
-		background-image: url("../../dist/img/heroImageBig.webp");
-
 		&__box {
 			&-heading {
 				font-size: 3.8rem;
@@ -543,9 +622,9 @@ body {
 	}
 	.about {
 		&__text {
+			padding: 2em;
 			font-size: 2rem;
 			line-height: 35px;
-			padding: 2em;
 			& h3 {
 				font-size: 2.8rem;
 			}
@@ -576,7 +655,6 @@ body {
 	}
 	.services {
 		padding-bottom: 24em;
-
 		&__card {
 			width: 350px;
 			min-height: 450px;
@@ -637,34 +715,35 @@ body {
 			}
 		}
 	}
-	.form__box {
-		width: 95%;
-		margin: 0 auto;
-		padding-top: 4em;
-		text-align: center;
-		& h3 {
-			display: block;
-			position: relative;
-			font-size: 2.4rem;
-			margin-bottom: 4em;
-			text-transform: uppercase;
-			&::after {
-				position: absolute;
-				content: "";
-				bottom: -20px;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 25%;
-				background-color: #f0eb77;
-				height: 3px;
+	.footer {
+		&__box {
+			&-shape {
+				&--first {
+					bottom: -80px;
+					left: -90px;
+				}
+				&--second {
+					top: -70px;
+					right: -70px;
+				}
 			}
 		}
+	}
+	.shape {
+		width: 150px;
+		height: 150px;
+	}
+	.form__box {
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 4em;
 	}
 }
 //
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
 	.header {
+		min-height: calc(100dvh - 80px);
 		&__box {
 			&-heading {
 				font-size: 4rem;
@@ -702,8 +781,6 @@ body {
 }
 // 4
 
-
-
 @media (min-width: 1400px) {
 	.shapes__container {
 		overflow: visible;
@@ -712,5 +789,3 @@ body {
 		z-index: 30;
 	}
 }
-
-

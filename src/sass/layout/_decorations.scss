@@ -1,41 +1,49 @@
 .shape {
 	position: absolute;
-	width: 50px;
-	height: 50px;
+	width: 80px;
+	height: 80px;
 	// background-color: #000;
-	border: 2px solid #000;
-	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+	// border: 2px solid #000;
+	// box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 	z-index: -11;
 }
 .shapes__container {
 	position: relative;
-	overflow: hidden;
+	overflow-x: clip;
 	z-index: 30;
 }
-.square__first {
-	left: -30px;
-	top: -20px;
+.about__us-shape--first {
+	left: -100px;
+	top: 200px;
 	transform: rotate(45deg);
 	background-color: #323232;
+	animation: rotate 40s linear infinite;
+	opacity: 0.8;
 }
 
-.square__second {
-	top: -30px;
-	left: -20px;
+.about__us-shape--second {
+	top: 300px;
+	right: 50px;
 	background-color: #f0eb77;
-	transform: rotate(45deg);
+	transform: rotate(25deg);
+	opacity: 0.4;
 	border: none;
-	z-index: 3;
 }
-.square__third {
-	top: -100px;
+.services__shape--first {
+	top: 10px;
 	right: -30px;
 	transform: rotate(45deg);
 	z-index: 3;
 }
-.square__fourth {
-	top: 0;
-	right: -50px;
+.services__shape--second {
+	background-color: #323232;
+	top: 35%;
+	left: 55%;
+	opacity: .9;
+	transform: translate(-35%,-55%);
+	transform: rotate(45deg);
+	animation: rotate 40s linear infinite;
+
 }
 
 .circle {
@@ -45,29 +53,23 @@
 	left: 20%;
 	border-radius: 50%;
 }
-.square__first {
-	animation: rotate 20s linear infinite;
-}
 
-.square__xd1 {
-	top: 120px;
-	left: -35px;
-	transform: rotate(45deg);
-}
-.square__xd {
-	top: 500px;
-	right: -45px;
+
+.faq__shape--first{
+top: 550px;
+	right: 85px;
 	background-color: #f0eb77;
 	transform: rotate(45deg);
-	z-index: 5;
 }
-.square__xd3 {
-	bottom: -20px;
-	left: -30px;
-	transform: rotate(45deg);
-	animation: rotate 20s linear infinite;
-	z-index: 1;
+.faq__shape--second{
+	top: 200px;
+	left: 90px;
+	transform: rotate(15deg);
+	background-color: #fff;
+	border: 2px solid #000;
 }
+
+
 @keyframes rotate {
 	0% {
 		transform: rotate(0deg);
@@ -79,7 +81,7 @@
 
 @media (min-width: 1400px) {
 	.shapes__container {
-		overflow: visible;
+		// overflow: visible;
 	}
 	.accordion {
 		z-index: 30;
