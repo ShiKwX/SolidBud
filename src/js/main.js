@@ -67,28 +67,7 @@ navbarItems.forEach((link) => {
 
 burger.addEventListener("click", toggleMenu)
 
-// fade in
-const cardSection = document.querySelector(".portfolio")
-const cards = cardSection.querySelectorAll(".fade-in")
-
-const options = {
-	rootMargin: "-110px",
-}
-
-const observer = new IntersectionObserver((entries, observer) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			cards.forEach((card, index) => {
-				setTimeout(() => {
-					card.style.opacity = 1
-				}, index * 350) // Delay for each card
-			})
-			observer.unobserve(entry.target)
-		}
-	})
-}, options)
-
-observer.observe(cardSection)
+// portfolio fade in
 
 // slider
 let slideIndex = 1
@@ -185,26 +164,110 @@ arrows.forEach((btn) => {
 })
 
 // animacje testy
-document.addEventListener("DOMContentLoaded", function () {
-	const section = document.querySelector(".services")
-	const firstServicesCard = section.querySelector(".services__card--first")
-	const secondServicesCard = section.querySelector(".services__card--second")
-	const thirdServicesCard = section.querySelector(".services__card--third")
+// function startAnimateCards(entries){
+// 	const section = document.querySelector(".services")
+// 	const firstServicesCard = section.querySelector(".services__card--first")
+// 	const secondServicesCard = section.querySelector(".services__card--second")
+// 	const thirdServicesCard = section.querySelector(".services__card--third")
 
-	const observer = new IntersectionObserver(
-		function (entries, observer) {
-			entries.forEach(function (entry) {
+// 	const observer = new IntersectionObserver(
+// 		function (entries, observer) {
+// 			entries.forEach(function (entry) {
+// 				if (entry.isIntersecting) {
+// 					section.classList.add("fade-inS")
+// 					firstServicesCard.classList.add("fade-in-from-left")
+// 					secondServicesCard.classList.add("fade-in-opacity")
+// 					thirdServicesCard.classList.add("fade-in-from-right")
+// 					observer.unobserve(entry.target)
+// 				}
+// 			})
+// 		},
+// 		{ threshold: 0.5 }
+// 	)
+
+// 	observer.observe(section)
+// }
+// startAnimateCards()
+
+// document.addEventListener("DOMContentLoaded", function () {
+// 	const section = document.querySelector(".services")
+// 	const firstServicesCard = section.querySelector(".services__card--first")
+// 	const secondServicesCard = section.querySelector(".services__card--second")
+// 	const thirdServicesCard = section.querySelector(".services__card--third")
+
+// 	const observer = new IntersectionObserver(
+// 		function (entries, observer) {
+// 			entries.forEach(function (entry) {
+// 				if (entry.isIntersecting) {
+// 					section.classList.add("fade-inS")
+// 					firstServicesCard.classList.add("fade-in-from-left")
+// 					secondServicesCard.classList.add("fade-in-opacity")
+// 					thirdServicesCard.classList.add("fade-in-from-right")
+// 					observer.unobserve(entry.target)
+// 				}
+// 			})
+// 		},
+// 		{ threshold: 0.5 }
+// 	)
+
+// 	observer.observe(section)
+// })
+
+// animacje
+
+const animations = () => {
+	function getRootMargin() {
+		const isMobile = window.innerWidth < 768
+		return isMobile ? "-150px" : "-250px"
+	}
+	const sectionsAnimations = () => {
+		const sections = document.querySelectorAll("section")
+
+		const sectionAnimationOptions = {
+			rootMargin: getRootMargin(),
+		}
+
+		function startAnimate(entries) {
+			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					section.classList.add("fade-inS")
-					firstServicesCard.classList.add("fade-in-from-left")
-					secondServicesCard.classList.add("fade-in-opacity")
-					thirdServicesCard.classList.add("fade-in-from-right")
+					entry.target.style.opacity = 1
 					observer.unobserve(entry.target)
 				}
 			})
-		},
-		{ threshold: 0.5 }
-	)
+		}
+		sections.forEach((section) => {
+			const observer = new IntersectionObserver(
+				startAnimate,
+				sectionAnimationOptions
+			)
+			observer.observe(section)
+		})
+	}
 
-	observer.observe(section)
-})
+	const portfolioAnimations = () => {
+		const cardSection = document.querySelector(".portfolio")
+		const cards = cardSection.querySelectorAll(".fade-in")
+
+		const options = {
+			rootMargin: getRootMargin(),
+		}
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					cards.forEach((card, index) => {
+						setTimeout(() => {
+							card.style.opacity = 1
+						}, index * 700) // Delay for each card
+					})
+					observer.unobserve(entry.target)
+				}
+			})
+		}, options)
+
+		observer.observe(cardSection)
+	}
+	sectionsAnimations()
+	portfolioAnimations()
+}
+animations()

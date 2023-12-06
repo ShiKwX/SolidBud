@@ -25,13 +25,11 @@
 		text-align: center;
 		font-size: 1.4rem;
 		font-weight: bold;
-		& span {
-			color: #a939d5;
-			// color: gold;
-		}
 	}
 	&__number {
 		font-size: 2.8rem;
-		font-weight: bold;
+		color: #000;
+		font-weight: 500;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 	}
 }
